@@ -15,3 +15,9 @@ export interface Vehicle {
   zeroToSixty: number;
   weightKg: number;
 }
+
+export interface VehicleFilters {
+  maxPrice: number;
+  minRange: number;
+  bodyType: string;
+}
