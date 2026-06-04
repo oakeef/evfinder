@@ -7,3 +7,5 @@ I made many tradeoffs since it was a simple prototpye. I didn't bother with much
 Given more time I would like to migrate all this data from the spreadsheet to a db of some kind and write a full featured api to interact with it
 I'd really like to flesh out more tests and a possibly add a simple user login with the ability to save cars and track the pricing trends. (since I chopped most of that data out to build this)
 Would be nice to add more complicated filters and some images of the vehicles as well
+
+Netlify link to check this out live: [Ev Finder](https://snazzy-panda-cc940c.netlify.app/)
