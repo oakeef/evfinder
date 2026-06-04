@@ -15,6 +15,8 @@ interface VehicleFiltersProps {
   availableBodyTypes: string[];
 }
 
+export const DEFAULT_FILTERS: VehicleFilters = { maxPrice: 200000, minRange: 0, bodyType: 'All' };
+
 export function FilterPanel({ filters, onChange, availableBodyTypes }: VehicleFiltersProps) {
   return (
     <Card className="bg-card shadow-sm border-muted-foreground/20">
@@ -73,7 +75,7 @@ export function FilterPanel({ filters, onChange, availableBodyTypes }: VehicleFi
 
         <button
           className="w-full py-2.5 mt-2 bg-blue-600 text-white hover:bg-blue-700 rounded-md font-semibold text-sm transition-colors shadow-sm"
-          onClick={() => onChange(() => ({ maxPrice: 150000, minRange: 0, bodyType: 'All' }))}
+          onClick={() => onChange(() => DEFAULT_FILTERS)}
         >
           Reset Filters
         </button>

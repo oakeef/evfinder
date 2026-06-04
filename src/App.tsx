@@ -4,17 +4,12 @@ import { VehicleCard } from './components/VehicleCard';
 import type { VehicleFilters } from './types/vehicle';
 import { useMemo, useState } from 'react';
 import { FilterPanel } from './components/VehicleFilters';
+import { DEFAULT_FILTERS } from './components/VehicleFilters';
 
 function App() {
   const { data = [], isLoading } = useVehicleData();
 
-  const defaultFilters: VehicleFilters = {
-    maxPrice: 200000,
-    minRange: 0,
-    bodyType: 'All',
-  };
-
-  const [filters, setFilters] = useState<VehicleFilters>(defaultFilters);
+  const [filters, setFilters] = useState<VehicleFilters>(DEFAULT_FILTERS);
 
   const uniqueBodyTypes = useMemo(() => {
     const types = data.map((v) => v.bodyType).filter(Boolean);
